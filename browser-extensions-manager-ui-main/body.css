@@ -1,6 +1,25 @@
-body{
+body {
     font-family: 'Inter', sans-serif;
     margin: 20px;
     padding: 0;
     background-color: hsl(227, 75%, 14%);
+    font-size: 16px; /* Base font size for body */
+}
+
+h3 {
+    font-size: 2rem; /* Headings larger and bold */
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+.extension-details p {
+    font-size: 1rem; /* Description normal size */
+    color: #e0e0e0;
+    margin: 0.25rem 0;
+}
+
+button {
+    font-size: 1rem; /* Button text size */
+    font-weight: 500;
 }

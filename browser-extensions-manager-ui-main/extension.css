@@ -30,10 +30,13 @@
 }
 .extension-details p{
     margin: 4px 0px;
+    font-size: 1rem; /* Description normal size */
+    color: #e0e0e0;
+    margin: 0.25rem 0;
 }
 .extension-name{
-    font-size: large;
-    font-weight: bold;
+     font-size: 1.25rem; /* Extension name slightly larger */
+    font-weight: 600;
 }
 .extension-setting{
      /* background-color: hsl(226, 25%, 17%); */
@@ -54,6 +57,12 @@
     border: 1px solid hsl(226, 11%, 37%);
     border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+    font-size: 1rem; /* Button text size */
+    font-weight: 500;
+}
+.remove-button:hover{
+    background-color: hsl(225, 20%, 59%);
 }
 .activated-button{
     height: 20px;
