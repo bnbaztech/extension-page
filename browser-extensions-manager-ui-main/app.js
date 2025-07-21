@@ -1,7 +1,6 @@
 import { dataExtension } from './data.js';
 
 const container = document.querySelector('.extension-container');
-// container.innerHTML = '';
 
 function renderExtensionList() {
   container.innerHTML = '';
@@ -17,10 +16,11 @@ function renderExtensionList() {
         </div>
       </div>
       <div class="extension-setting">
-        <button class='remove-button js-remove-button' data-idx="${idx}"> remove </button>
-        <button class="myToggleButton${ext.isActive ? ' active' : ''}" data-idx="${idx}">
-          ${ext.isActive ? 'Active' : 'Inactive'}
-        </button>
+        <button class='remove-button js-remove-button' data-idx="${idx}">Remove</button>
+       
+       <div class="activated-button">
+        <button class="myToggleButton${ext.isActive ? ' active' : ''}"  data-idx="${idx}"></button>
+       </div>
       </div>
     `;
     container.appendChild(box);
@@ -28,7 +28,7 @@ function renderExtensionList() {
 }
 renderExtensionList();
 
-// Event delegation for remove and active buttons
+// Event delegation for remove and active buttons from the container
 container.addEventListener('click', (e) => {
   if (e.target.classList.contains('js-remove-button')) {
     const idx = e.target.getAttribute('data-idx');
@@ -36,8 +36,25 @@ container.addEventListener('click', (e) => {
     renderExtensionList();        // Re-render the list
   }
   if (e.target.classList.contains('myToggleButton')) {
-    const idx = e.target.getAttribute('data-idx');
+    let idx = e.target.getAttribute('data-idx');
+    console.log(idx)
     dataExtension[idx].isActive = !dataExtension[idx].isActive;
     renderExtensionList();
+  }
+});
+
+// the moon daylight button funtion
+
+let htmlDayMoon = document.querySelector('.js-moon-sunlight-display');
+htmlDayMoon.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  console.log(document.body.classList.toggle('day-mode'));
+  if (document.body.classList.contains('dark-mode')) {
+    document.body.classList.add('dark-mode')
+    htmlDayMoon.innerHTML = `<img src="./assets/images/icon-moon.svg" alt="">`;
+  } else {
+    document.body.classList.remove('body.dark-mode')
+    // document.body.classList.remove('.header-day-mode')
+    htmlDayMoon.innerHTML = `<img src="./assets/images/icon-sun.svg" alt="">`;
   }
 });

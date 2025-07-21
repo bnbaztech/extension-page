@@ -1,4 +1,4 @@
-.header {
+.header{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     background-color: hsl(227, 36%, 31%);
     color: hsl(0, 0%, 100%);
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    /* transition: background-color 0.3s ease; */
     font-size: 300;
     outline: none;
     border: none;
@@ -31,8 +31,6 @@
 }
 
 input::placeholder{
-    font-size: large;
-    font-weight: 900;
     color: hsl(200, 60%, 99%);
 }
 .moon-sunlight-display{
@@ -59,10 +57,78 @@ input::placeholder{
     margin: 0px;
     color: white;
 }
+
+.sub-header-rightside button{
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: hsl(226, 61%, 19%);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: 1px solid white;
+}
+.sub-header-rightside button:hover{
+    background-color: #4CAF50;
+    outline: 2px solid #db4c4c;
+}
 .sub-header-rightside button{
     padding: 10px 20px;
     border-radius: 20px;
     border: none;
     margin-right: 5px;
     cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+
+/* day mode code */
+
+body.dark-mode .header{
+ background-color: #e3fcf7;;
+}
+body.dark-mode .input-container{
+     background-color: #fefafa;
+    color: hsl(0, 0%, 1%);
+    box-shadow: none;
+}
+body.dark-mode .search-bar{
+     background-color: #fefafa;
+    color: hsl(0, 0%, 1%);
+    box-shadow: none;
+}
+body.dark-mode .logo-image{
+     background-color: #fefafa;
+    color: hsl(0, 0%, 1%);
+    box-shadow: none;
+}
+body.dark-mode input::placeholder{
+    color: hsl(210, 1%, 31%);
+}
+body.dark-mode .sub-header-rightside button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.3s ease;
+}
+body.dark-mode .sub-header-rightside button{
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s easec;
+}
+body.dark-mode .sub-header-rightside button:hover{
+    background-color: hsl(240, 1%, 86%);
+    outline: 1px solid #4CAF50;
+}
+body.dark-mode .sub-header-leftside h3{
+    margin: 0px;
+    color: rgb(0, 0, 0);
+}
+body.dark-mode .moon-sunlight-display{
+    background-color:  hsl(0, 0%, 91%);
 }
