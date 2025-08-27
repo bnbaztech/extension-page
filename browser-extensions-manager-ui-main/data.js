@@ -1,6 +1,6 @@
  export const dataExtension = [
     {
-        "logo": "./assets/images/logo-devlens.svg",
+        logo: "./assets/images/logo-devlens.svg",
         "name": "DevLens",
         "description": "Quickly inspect page layouts and visualize element boundaries.",
         "isActive": true

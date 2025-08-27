@@ -1,0 +1,44 @@
+@media screen and (min-width: 1200px) {
+  .extension-container{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .extension-details p{
+    margin: 4px 0px;
+    font-size: 1rem; /* Description normal size */
+
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .extension-container{
+      grid-template-columns: 1fr 1fr 1fr;
+  }
+  .logo-image img{
+    height: 35px;
+    width: 160px;
+  }
+}
+
+@media  (min-width: 600.99px) and (max-width: 991.98px) {
+  .extension-container{
+      grid-template-columns: 1fr 1fr;
+  }
+   .logo-image img{
+    height: 30px;
+    width: 140px;
+  }
+}
+
+@media (max-width: 600.98px) {
+  .extension-container{
+      grid-template-columns: 1fr;
+  }
+   .logo-image img{
+    height: 25px;
+    width: 120px;
+  }
+}
+
+
+
+    

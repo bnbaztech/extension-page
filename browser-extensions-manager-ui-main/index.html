@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./body.css">
   <link rel="stylesheet" href="./head.css">
   <link rel="stylesheet" href="./extensionDay.css">
+  <link rel="stylesheet" href="./repo.css">
 
   <title>Frontend Mentor | Browser extensions manager UI</title>
   
@@ -17,23 +18,23 @@
     <div>
       <!-- #header code -->
         <header class="header dark-mode">
-          <div class="logo-image day-mode"><img src="./assets/images/logo.svg" alt=""></div>
+          <div class="logo-image day-mode"><img src="./assets/images/logo.svg" alt="" class="logo"></div>
           <div class="input-container">
             <input type="text" class="search-bar" placeholder="Extension Search Box">
             <button class="moon-sunlight-display js-moon-sunlight-display"><img src="./assets/images/icon-sun.svg" alt=""></button>
           </div>
         </header>
-        <div class="sub-header">
+        <div class="sub-header js-sub-header">
           <div class="sub-header-leftside">
             <h3 class="light-mode">Extension List</h3>
           </div>
           <div class="sub-header-rightside">
-            <button>All</button>
-            <button>Active</button>
-            <button>Inactive</button>
+            <button id="btnAll" class="selected btnAll">All</button>
+            <button id="btnActive" class="selected btnActive">Active</button>
+            <button id="btnInactive" class="selected btnInactive">Inactive</button>
           </div>
         </div>
-      <nav class="extension-container">
+      <nav class="extension-container js-extension-container">
         <!-- web page Html  -->
       </nav>
     </div>

@@ -45,6 +45,8 @@ input::placeholder{
     height: 50px;
     padding: 3px;
     border-radius: 20px 0px 0px 20px;
+    display: flex;
+    align-items: center;
 }
 .sub-header{
     display: flex;
@@ -69,6 +71,10 @@ input::placeholder{
     border: 1px solid white;
 }
 .sub-header-rightside button:hover{
+    background-color: #4CAF50;
+    outline: 2px solid #db4c4c;
+}
+.sub-header-rightside button.activebutton{
     background-color: #4CAF50;
     outline: 2px solid #db4c4c;
 }
